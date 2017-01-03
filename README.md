@@ -1,5 +1,10 @@
 # Mutation-Testing-PHP
 
+## W przykladzie zostanie wykorzystany wzorzec projektowy dekorator 
+- gdy dany obiek jest podatny na rozszerzenia
+
+![alt tag](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Decorator_classes_pl.svg/400px-Decorator_classes_pl.svg.png)
+
 ## Instalacja i konfiguracja
 
 - git clone https://github.com/padraic/humbug.git
