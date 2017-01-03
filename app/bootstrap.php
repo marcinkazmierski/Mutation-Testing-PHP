@@ -1,5 +1,4 @@
 <?php
-declare(strict_types = 1);
 
 if (!defined('APPLICATION_ROOT')) {
     define('APPLICATION_ROOT', getcwd());
