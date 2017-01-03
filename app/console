@@ -1,0 +1,15 @@
+#!/usr/bin/php
+<?php
+set_time_limit(0);
+
+if (!defined('APPLICATION_ROOT')) {
+    define('APPLICATION_ROOT', getcwd());
+}
+require_once APPLICATION_ROOT . '/app/bootstrap.php';
+
+fwrite(STDOUT, "\033[0;33m"); // console color
+fwrite(STDOUT, "Mutation-Testing-PHP\n\n");
+fwrite(STDOUT, "\033[0;32m");
+
+fwrite(STDOUT, "\033[0m"); // reset console color
+exit(0);
