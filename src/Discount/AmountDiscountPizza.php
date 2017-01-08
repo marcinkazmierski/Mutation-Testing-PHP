@@ -20,6 +20,9 @@ class AmountDiscountPizza implements PizzaInterface
 
     public function getPrice():float
     {
+        if ($this->pizza->getPrice() < 11) {
+            return $this->pizza->getPrice();
+        }
         return $this->pizza->getPrice() - 1.00;
     }
 

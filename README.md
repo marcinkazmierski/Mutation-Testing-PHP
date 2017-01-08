@@ -1,5 +1,12 @@
 # Mutation-Testing-PHP
 
+## Testy mutacyjne w PHP
+- Framework Humbug
+- Humbug wprowadza drobne modyfikacje kodu żródłowego
+- Następnie Humbug odpala testy w phpunit by sprawdzić czy zakończyły się niepowodzeniem
+- Jeśl, któraś z mutacji nie wywołała błędnego testu, 
+to prawdopodobnie źle został otestowany ten fragment kodu
+
 ## W przykladzie został wykorzystany wzorzec projektowy dekorator 
 - gdy dany obiek jest podatny na rozszerzenia
 
@@ -16,7 +23,8 @@ Przechodzimy do folderu z naszym projektem
 
 Odpalamy testy w krokach: 
 - phpunit --tap (by zobaczyć czy wszystkie testy przechodzą)
-- ../humbug/bin/humbug configure
+- ../humbug/bin/humbug configure 
+(tylko przy pierwszym uruchomieniu - by wygenerowac plik humbuglog.txt)
 - ../humbug/bin/humbug run
 
 Raport w pliku:
@@ -25,11 +33,11 @@ Raport w pliku:
 Konfiguracja leci do tmp:
 - tmp/humbug/
 
-Pamiętać:
+Uwaga:
 - jeśli w projekcie będzie __autoload to niestety się on nie odpali pod humbug działa np. spl_autoload_register('AutoLoader');
 - musi być tak skonfigurowany phpunit.xml, że przy odpaleniu komendy php phpunit.phar –tap odpalają się poprawnie testy:
 ```xml
-<testsuite name='Framework MVC'>
-    <directory suffix='.php'>framework/tests/</directory>
+<testsuite name='Mutation-Testing-PHP'>
+    <directory suffix='.php'>tests/</directory>
 </testsuite>
 ```
