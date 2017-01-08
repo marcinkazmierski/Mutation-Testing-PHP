@@ -2,13 +2,13 @@
 
 ## Testy mutacyjne w PHP
 - Framework Humbug
-- Humbug wprowadza drobne modyfikacje kodu żródłowego
+- Humbug wprowadza drobne modyfikacje kodu źródłowego
 - Następnie Humbug odpala testy w phpunit by sprawdzić czy zakończyły się niepowodzeniem
-- Jeśl, któraś z mutacji nie wywołała błędnego testu, 
+- Jeśli, któraś z mutacji nie wywołała błędnego testu, 
 to prawdopodobnie źle został otestowany ten fragment kodu
 
-## W przykladzie został wykorzystany wzorzec projektowy dekorator 
-- gdy dany obiek jest podatny na rozszerzenia
+## W przykładzie został wykorzystany wzorzec projektowy dekorator 
+- gdy dany obiekt jest podatny na rozszerzenia
 
 ![alt tag](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Decorator_classes_pl.svg/400px-Decorator_classes_pl.svg.png)
 
@@ -24,7 +24,7 @@ Przechodzimy do folderu z naszym projektem
 Odpalamy testy w krokach: 
 - phpunit --tap (by zobaczyć czy wszystkie testy przechodzą)
 - ../humbug/bin/humbug configure 
-(tylko przy pierwszym uruchomieniu - by wygenerowac plik humbuglog.txt)
+(tylko przy pierwszym uruchomieniu - by wygenerować plik humbuglog.txt)
 - ../humbug/bin/humbug run
 
 Raport w pliku:
