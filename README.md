@@ -1,6 +1,6 @@
 # Mutation-Testing-PHP
 
-## W przykladzie zostanie wykorzystany wzorzec projektowy dekorator 
+## W przykladzie został wykorzystany wzorzec projektowy dekorator 
 - gdy dany obiek jest podatny na rozszerzenia
 
 ![alt tag](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Decorator_classes_pl.svg/400px-Decorator_classes_pl.svg.png)
@@ -15,7 +15,8 @@ Przechodzimy do folderu z naszym projektem
 (warto sprawdzić czy mamy ten sam phpunit version w projekcie i w humbug)
 
 Odpalamy testy w krokach: 
-- php phpunit.phar –tap (by zobaczyć czy wszystkie testy przechodzą)
+- phpunit --tap (by zobaczyć czy wszystkie testy przechodzą)
+- ../humbug/bin/humbug configure
 - ../humbug/bin/humbug run
 
 Raport w pliku:
