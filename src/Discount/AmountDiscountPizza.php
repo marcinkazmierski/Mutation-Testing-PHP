@@ -1,10 +1,12 @@
 <?php
+
 declare(strict_types = 1);
 
-namespace Food;
+namespace Discount;
 
+use Food\PizzaInterface;
 
-class PepperoniPizza implements PizzaInterface
+class AmountDiscountPizza implements PizzaInterface
 {
     /**
      * @var PizzaInterface
@@ -18,11 +20,11 @@ class PepperoniPizza implements PizzaInterface
 
     public function getPrice():float
     {
-        return $this->pizza->getPrice() + 5.00;
+        return $this->pizza->getPrice() - 1.00;
     }
 
     public function getToppings():array
     {
-        return array_merge($this->pizza->getToppings(), ['pepperoni']);
+        return $this->pizza->getToppings();
     }
 }
