@@ -46,15 +46,18 @@ class OrderTest extends TestCase
     {
         $pepperoni = new PepperoniPizza($this->pizza);
         $this->order->removePizza($pepperoni);
-
-        $this->assertEquals([], $this->order->getAllPizza()); //  $this->assertFalse($this->order->removePizza($pepperoni));
+        $this->assertFalse($this->order->removePizza($pepperoni));
     }
 
     public function testCalculateTotalAmount()
     {
         $pizzaWithDiscount = new AmountDiscountPizza($this->pizza);
+        $pepperoni = new PepperoniPizza($this->pizza);
+        $pepperoniWithDiscount = new AmountDiscountPizza($pepperoni);
+
+        $this->order->addPizza($pepperoniWithDiscount);
         $this->order->addPizza($pizzaWithDiscount);
         $this->order->addPizza($this->pizza);
-        $this->assertTrue($this->order->calculateTotalAmount() > 0); //  $this->assertEquals(10.5, $this->order->calculateTotalAmount());
+        $this->assertEquals(32.5 - AmountDiscountPizza::AMOUNT_OF_DISCOUNT, $this->order->calculateTotalAmount());
     }
 }

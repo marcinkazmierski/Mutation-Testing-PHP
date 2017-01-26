@@ -13,6 +13,10 @@ class AmountDiscountPizza implements PizzaInterface
      */
     private $pizza;
 
+    const AMOUNT_FOR_DISCOUNT = 10.55;
+
+    const AMOUNT_OF_DISCOUNT = 1.25;
+
     public function __construct(PizzaInterface $pizza)
     {
         $this->pizza = $pizza;
@@ -20,10 +24,10 @@ class AmountDiscountPizza implements PizzaInterface
 
     public function getPrice():float
     {
-        if ($this->pizza->getPrice() < 11) {
+        if ($this->pizza->getPrice() < self::AMOUNT_FOR_DISCOUNT) {
             return $this->pizza->getPrice();
         }
-        return $this->pizza->getPrice() - 1.00;
+        return $this->pizza->getPrice() - self::AMOUNT_OF_DISCOUNT;
     }
 
     public function getToppings():array

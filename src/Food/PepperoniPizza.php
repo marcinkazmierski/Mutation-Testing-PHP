@@ -18,7 +18,7 @@ class PepperoniPizza implements PizzaInterface
 
     public function getPrice():float
     {
-        return $this->pizza->getPrice() + 5.00;
+        return $this->pizza->getPrice() + 1.00;
     }
 
     public function getToppings():array
